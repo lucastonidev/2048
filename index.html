@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>2048 - RimuGames</title>
+    <!-- FontAwesome para os ícones -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Folha de Estilos -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="icon" href="./assets/img/logo-512.png" type="image/png" />
+  </head>
+  <body>
+    <canvas id="particle-canvas"></canvas>
+    <div class="container">
+      <!-- Cabeçalho e Painel -->
+      <header class="header">
+        <div class="title-section">
+          <div class="logo">
+            <img src="./assets/img/logo-192.png" alt="Logo do Jogo 2048" />
+            <h1>2048</h1>
+          </div>
+          <p>Junta os números e chega ao <strong>2048</strong>!</p>
+        </div>
+
+        <div class="panel-section">
+          <div class="scores">
+            <div class="score-box">
+              <span class="score-label"
+                ><i class="fa-solid fa-star"></i> Pontos</span
+              >
+              <span class="score-value" id="score">0</span>
+            </div>
+            <div class="score-box">
+              <span class="score-label"
+                ><i class="fa-solid fa-trophy"></i> Melhor</span
+              >
+              <span class="score-value" id="best-score">0</span>
+            </div>
+          </div>
+          <button id="btn-new-game" class="btn-primary">
+            <i class="fa-solid fa-rotate-right"></i> Novo Jogo
+          </button>
+        </div>
+      </header>
+
+      <!-- Tabuleiro -->
+      <main class="game-container" id="game-container">
+        <!-- As células de fundo (grid) -->
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+
+        <!-- As peças (tiles) serão injetadas aqui pelo JS -->
+        <div id="tile-container"></div>
+
+        <!-- Telas de Fim/Vitória -->
+        <div class="overlay hidden" id="game-over-overlay">
+          <h2><i class="fa-solid fa-skull"></i> Fim de Jogo</h2>
+          <p>Ficaste sem movimentos disponíveis.</p>
+          <button class="btn-secondary" id="btn-retry">Tentar Novamente</button>
+        </div>
+
+        <div class="overlay hidden" id="game-won-overlay">
+          <h2><i class="fa-solid fa-crown"></i> Ganhaste!</h2>
+          <p>Chegaste à peça 2048.</p>
+          <div class="overlay-buttons">
+            <button class="btn-secondary" id="btn-continue">
+              Continuar a Jogar
+            </button>
+            <button class="btn-primary" id="btn-won-new">Novo Jogo</button>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+      <p>Criado por <strong>Lucas Toniato Dev</strong></p>
+      <div class="social-links">
+        <a
+          href="https://github.com/lucastonidev"
+          target="_blank"
+          title="GitHub"
+          style="--color: #ccc"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a
+          href="https://www.instagram.com/lucastoni0101/"
+          target="_blank"
+          title="Instagram"
+          style="--color: #e1306c"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+      </div>
+    </footer>
+
+    <!-- Módulo Principal JS -->
+    <script type="module" src="./assets/js/main.js"></script>
+  </body>
+</html>
