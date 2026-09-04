@@ -1,4 +1,4 @@
-const CACHE_NAME = "@rimugames-2048-v2"; // Mudamos para v2 para forçar a atualização
+const CACHE_NAME = "@rimugames-2048-v3";
 const ASSETS_TO_CACHE = [
   "./",
   "./index.html",
@@ -6,8 +6,8 @@ const ASSETS_TO_CACHE = [
   "./assets/css/style.css",
   "./assets/js/main.js",
   "./assets/js/core/game.js",
-  "./assets/js/core/particles.js", // Arquivo novo adicionado
-  "./assets/js/data/shapes.json", // Arquivo novo adicionado
+  "./assets/js/core/particles.js", 
+  "./assets/js/data/shapes.json",
   "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css",
 ];
 
